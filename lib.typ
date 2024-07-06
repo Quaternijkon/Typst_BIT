@@ -191,14 +191,14 @@
   // - self: The self parameter of the outline-slide function.
   // Returns:
   // - The generated outline slide.
-  self.buaa-title = context if text.lang == "zh" [目录] else [Outline]
+  self.buaa-title = context if text.lang == "zh" [目录] else [目录]
   let content = {
     set align(horizon)
     set text(weight: "bold")
     hide([-])
     buaa-outline(self: self)
   }
-  (self.methods.touying-slide)(self: self, repeat: none, section: (title: context if text.lang == "zh" [目录] else [Outline]), content)
+  (self.methods.touying-slide)(self: self, repeat: none, section: (title: context if text.lang == "zh" [目录] else [目录]), content)
 }
 
 /**
@@ -210,7 +210,7 @@
  * @returns The new section slide.
  */
 #let new-section-slide(self: none, short-title: auto, title) = {
-  self.buaa-title = context if text.lang == "zh" [目录] else [Outline]
+  self.buaa-title = context if text.lang == "zh" [目录] else [目录]
   let content = {
     set align(horizon)
     set text(weight: "bold")
@@ -313,10 +313,10 @@
   // color theme
   self = (self.methods.colors)(
     self: self,
-    primary: rgb("#034ea1"),
-    primary-dark: rgb("#004098"),
-    secondary: rgb("#ffffff"),
-    tertiary: rgb("#005bac"),
+    primary: rgb("#006c39"),
+    primary-dark: rgb("#006c39"),
+    secondary: rgb("#a13f06"),
+    tertiary: rgb("#a13f06"),
     neutral-lightest: rgb("#ffffff"),
     neutral-darkest: rgb("#000000"),
   )
@@ -338,7 +338,7 @@
     grid(
       columns: (ratio * 100%, 1fr),
       rows: 2pt,
-      components.cell(fill: gradient.linear(self.colors.primary.lighten(10%),self.colors.primary.darken(10%))),
+      components.cell(fill: gradient.linear(self.colors.primary,self.colors.secondary)),
       components.cell(fill: self.colors.neutral-lightest),
     )
   })
@@ -381,7 +381,7 @@
       cell(fill: self.colors.primary, ustc-nav-bar(self: self)),
       // cell(fill: self.colors.primary, utils.call-or-display(self, footer-a)),
       // cell(fill: self.colors.primary-dark.darken(20%), utils.call-or-display(self, footer-b)),
-      cell(fill: self.colors.primary.darken(10%), utils.call-or-display(self, footer-d)),
+      cell(fill: self.colors.secondary, utils.call-or-display(self, footer-d)),
     )
   }
   self.buaa-header = self => {
@@ -394,7 +394,7 @@
       
       place(left + horizon, text(fill: self.colors.neutral-lightest, weight: "bold", size: 1.3em, self.buaa-title), dx: 1.5em)
 
-      place(right + horizon, image("assets/vi/ustc_logo_side.svg",format: "svg"), dx: -1em)
+      place(right + horizon, image("assets/vi/logo_01.svg",format: "svg", height: 40%), dx: -1em)
     }
   }
   // set page

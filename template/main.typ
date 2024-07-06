@@ -12,14 +12,14 @@
 // Global information configuration
 #let s = (s.methods.info)(
   self: s,
-  title: [United States Training Center],
-  subtitle: [Man: What Can I Say? Manba Out!],
-  author: [private],
+  title: [百丽宫],
+  subtitle: [palace of hundreds of beauties],
+  author: [北小理],
   date: datetime.today(),
-  institution: [School of Computer Science and Technology, USTC],
+  institution: [Beauty In Temple],
   // logo: image("../assets/vi/ustc-cs.svg", width: 20%)
   // logo: image("../assets/vi/ustc_logo_side.svg", width: 20%)
-  logo: image("../assets/vi/绘图1.svg", width: 50%)
+  logo: image("../assets/vi/logo_01.svg", width: 40%)
 )
 
 // Extract methods
@@ -47,12 +47,12 @@
  */
 #outline-slide()
 
-= Openharmony系统
+= 必须要有的标题
 
 == 
 
-= 终端大模型
+= 养育之恩不能忘记
 
 
 
-= vLLM
+= 的确非常好用
